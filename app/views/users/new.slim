@@ -5,7 +5,22 @@ div id='marketing'
 
     = simple_form_for @user, class:'mt-5' do |f|
 			
+      = f.input :first_name
+      = f.input :last_name
+      hr
+      h4 class='mt-3'Adress
+      .row
+      	.col-md-3
+      		= f.input :st_number, label: "Number"
+      	.col-md-9	
+      		= f.input :st_name, label: "Street"
+      .row
+      	.col-md-3
+      		= f.input :zip, label: "Zip"
+      	.col-md-9
+      		= f.input :city, label: "City"
 
+      hr
       h4 class='mt-3'Sign in informations
       = f.input :email
       = f.input :password
