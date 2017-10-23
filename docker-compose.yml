@@ -3,8 +3,7 @@ version: '3'
 volumes:
   postgres-data:
     driver: local
-  app-gems:
-    driver: local
+  
 
 services:
   db:
@@ -19,7 +18,7 @@ services:
     command: guard start --no-bundler-warning --no-interactions --plugin rubocop
     volumes:
       - .:/myapp
-      - app-gems:/usr/local/bundle
+      
     depends_on:
       - db
 
